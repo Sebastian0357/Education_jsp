@@ -1,0 +1,204 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+	
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #ffe3bc;
+    
+
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#img1 {
+    width: 120em;
+    height: 35em;
+
+}
+
+.title {
+    width: 20em;
+    background-color: rgb(213, 4, 0);
+    color: azure;
+    margin: 0.5em 15%;
+    padding: 1em 1em 1em 1em;
+    border-radius: 5px;
+}
+
+.title h2 {
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main1 {
+    position: absolute;
+    top: 42em;
+    width: 120em;
+    margin: 0px auto;
+}
+
+#title1 {
+    position: absolute;
+    top: -3em;
+    left: 12em;
+    z-index: 1;
+}
+
+.text {
+    width: 54em;
+    margin: 0px auto;
+    font-size: 1.15em;
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 6px;
+    border-color: rgb(243, 100, 47);
+    border-radius: 20px;
+    padding: 30px 20px 20px 20px;
+}
+
+#main2 {
+    position: absolute;
+    top: 59em;
+    width: 120em;
+    height: auto;
+    margin: 0px auto;
+}
+
+#title2 {
+    position: absolute;
+    top: -3em;
+    left: 12em;
+    z-index: 1;
+}
+
+#table1 {
+    padding: 30px 20px 220px 20px;
+}
+
+#city {
+    position: relative;
+    /*鐩稿甯冨眬*/
+}
+
+#city img {
+    width: 13.5em;
+    height: 7.5em;
+    transition: all 0.3s linear 0s;
+    opacity: 0.5;
+}
+
+#city:hover img {
+    opacity: 1;
+}
+
+#city p {
+    text-decoration: none;
+    width: inherit;
+    text-align: right;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    /*璁句负缁濆瀹氫綅*/
+    z-index: 1;
+    /*缃簬涓婂眰*/
+    top: 40px;
+    left: 33%;
+}
+
+#cityText {
+    font-size: 20px;
+    position: absolute;
+    top: 23em;
+    left: 22.5em;
+}
+
+#cityText td {
+    max-width: 17.5em;
+    padding: 10px;
+}
+
+
+#main3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 108em;
+    width: 120em;
+    margin: 0px auto;
+}
+
+#table2 img {
+    width: 13.5em;
+    height: 7.5em;
+}
+
+#table2 .p1 {
+    text-align: center;
+
+}
+
+#table2 .p2 {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+#title3 {
+    position: absolute;
+    top: -3em;
+    left: 12em;
+    z-index: 1;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    position: absolute;
+    top: 154em;
+    width: 120em;
+    height: 10em;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+#about h2 {
+    margin-top: 1em;
+    color: rgb(213, 4, 0);
+}
+
+#about p {
+    margin: 10px auto;
+    color: white;
+    font-size: large;
+}
+
+.s1 #city img {
+    opacity: 1;
+}

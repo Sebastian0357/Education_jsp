@@ -1,0 +1,61 @@
+@charset "UTF-8";
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+}
+
+#nav {
+    width: 120em;
+    margin: 0px auto;
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: yellow; */
+    background-color: rgb(247, 247, 247);
+}
+
+#nav li {
+    /* display: flex; */
+    float: left;
+}
+
+#nav li img {
+    padding-left: 60px;
+    padding-right: 40px;
+    float: left;
+    width: 50px;
+}
+
+#nav li a {
+    color: black;
+    text-decoration: none;
+    /* 鍘讳笅鍒掔嚎 */
+    font-size: 18px;
+    display: block; 
+    text-align: center;
+    /* 鍙宠竟妗� */
+}
+
+#nav li p {
+	margin:0 0;
+    color: black;
+    font-size: 18px;
+    padding: 0px 30px;
+}
+
+#nav li:nth-last-child(2) a {
+    /* 鍘绘帀鏈�鍚庝竴涓彸杈规 */
+    border-right: none;
+}
+
+/* 闄や簡绗竴涓� 鍏朵粬鎽镐笂鍘婚兘鍙樿壊 */
+#nav li a:hover {
+    color: red;
+}
+
+#nav li p:hover {
+    color: red;
+}

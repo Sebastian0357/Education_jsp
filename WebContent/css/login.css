@@ -1,0 +1,71 @@
+@charset "UTF-8";
+body {
+    background-image: url(../image/loginBackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.login-form {
+    width: 360px;
+    height: 530px;
+    margin: 5em auto;
+    text-align: center;
+    padding: 2em;
+    background-color: #fffefe;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    /* 璁剧疆鏂囨湰涓婄殑瑁呴グ鎬х嚎鏉� */
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 2em;
+}
+
+form div {
+    margin-bottom: 2em;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-size: 1.2em;
+}
+
+#submit {
+    width: 20%;
+    margin: 0 auto;
+    padding: 0.5em;
+    border: none;
+    background-color: #c82f27;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#submit a {
+    color: #fff;
+}
+
+button:hover {
+    background-color: #891501;
+}
+
+.text p {
+    margin-top: 1em;
+}
