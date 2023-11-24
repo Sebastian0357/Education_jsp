@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +15,7 @@
         <div class="login-form">
             <h1>用户注册</h1>
             <form action="../html/Index.html" method="post" id="form_one">
+            	<input type="hidden" name="flag">
                 <div>
                     <label for="username">用户名：</label>
                     <input type="text" id="username" name="username" required>
@@ -31,12 +33,14 @@
                 </div>
             </form>
 
-            <span id="checkPhone" style="color: red"></span><br>
+			<c:if test="${requestScope.user!=null}">
+				<span id="checkPhone" style="color: red">该用户名已存在！</span><br>
+			</c:if>
+
             <span id="checkPass" style="color: red"></span>
             <span id="checkConPass" style="color: red"></span>
             <p>已有有账号？<a href="login.jsp">点击登录</a></p>
-
         </div>
     </main>
-</body>>
+</body>
 </html>

@@ -24,7 +24,7 @@
                 <p id="goto3">新时代好少年 • 红心向党</p>
             </li>
             <!-- <li><a href="#">客户服务</a></li> -->
-            <li><a href="./login.jsp">登录</a></li>
+            <li><a href="./login.jsp">登录${user.uname }</a></li>
             <p id="time"></p>
         </ul>
     </div>

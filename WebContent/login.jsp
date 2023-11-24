@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="css/login.css">
+	<script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
     <main>
         <div class="login-form">
             <h1>用户登录</h1>
-            <form action="../html/Index.html" method="post" id="form_one">
+            <form action="LoginServlet" method="post" id="form_one">
                 <div>
                     <label for="username">用户名：</label>
                     <input type="text" id="username" name="username" required>
@@ -27,8 +29,8 @@
                     <input type="submit" id="submit" value="登录"></input>
                 </div>
             </form>
-            <span id="checkPhone" style="color: red"></span><br>
-            <span id="checkPass" style="color: red"></span>
+            <span id="checkPhone" style="color: red">${NameError }</span><br>
+            <span id="checkPass" style="color: red">${PwdError }</span>
             <p>还没有账号？<a href="register.jsp">点击注册</a></p>
             <p><a href="admin.html">管理员界面</a></p>
         </div>
