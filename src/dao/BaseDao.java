@@ -17,7 +17,7 @@ public class BaseDao {
 				//1.加载驱动程序
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				//2.创建数据库连接对象，url中存放对应数据库的连接地址
-				String url = "jdbc:mysql://localhost:3306/2022jsp"
+				String url = "jdbc:mysql://localhost:3306/education"
 						+ "?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai";
 				//循环十次，每次向连接池list中添加一个数据库连接对象conn
 				for(int i=1; i<=10; i++)

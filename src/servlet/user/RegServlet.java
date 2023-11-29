@@ -32,8 +32,8 @@ public class RegServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("uname");
-		String pwd = request.getParameter("pwd");
+		String uname = request.getParameter("username");
+		String pwd = request.getParameter("password");
 		String flag = request.getParameter("flag");
 		UserDao uDao = new UserDao();
 		if("0".equals(flag))
@@ -41,7 +41,7 @@ public class RegServlet extends HttpServlet {
 			User u = uDao.findByName(uname);
 			request.setAttribute("user", u);
 			request.setAttribute("uname", uname);
-			RequestDispatcher disp = request.getRequestDispatcher("reg.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("register.jsp");
 			disp.forward(request, response);
 		}
 		

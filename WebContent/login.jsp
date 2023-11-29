@@ -26,7 +26,7 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div>
-                    <input type="submit" id="submit" value="登录"></input>
+                    <input type="submit" id="sub" value="登录"></input>
                 </div>
             </form>
             <span id="checkPhone" style="color: red">${NameError }</span><br>

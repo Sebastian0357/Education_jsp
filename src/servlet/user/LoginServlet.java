@@ -41,7 +41,6 @@ public class LoginServlet extends HttpServlet {
 //		if(rand.equals(code))
 //		{
 			//获取用户在表单中输入的用户名和密码
-		System.out.println("111");
 			String uname = request.getParameter("username");
 			String pwd = request.getParameter("password");
 			//通过UserDao对象，查找数据库表usertable中名为uname的用户信息，并存入对象u中

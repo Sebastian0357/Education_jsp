@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-    background-image: url(../image/loginBackground.jpg);
+    background-image: url(../image/loginBackground.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -44,7 +44,7 @@ input {
     font-size: 1.2em;
 }
 
-#submit {
+#sub {
     width: 20%;
     margin: 0 auto;
     padding: 0.5em;
@@ -58,7 +58,7 @@ input {
 
 }
 
-#submit a {
+#sub a {
     color: #fff;
 }
 

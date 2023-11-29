@@ -10,12 +10,12 @@ $(function () {
     });
     //验证账号
     function checkUsername() {
-        var phone = $("#username").val();
-        var phones = /^1\d{10}$/;
-        if (phones.test(phone) == false) {
-            $("#checkPhone").text("请输入11位手机号");
-            return false
-        }
+//        var phone = $("#username").val();
+//        var phones = /^1\d{10}$/;
+//        if (phones.test(phone) == false) {
+//            $("#checkPhone").text("请输入11位手机号");
+//            return false
+//        }
         return true
     }
     //验证密码

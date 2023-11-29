@@ -11,7 +11,7 @@ public class UserDao extends BaseDao
 		//调用继承自父类的方法getConn，完成前两个步骤：“加载驱动”和“创建连接”
 		Connection conn = getConn();
 		//SQL条件查询语句：在usertable表中，获取名为'？'用户的全部信息，注：'？'为占位符
-		String sql = "select * from usertable where userName = ?";
+		String sql = "select * from usertable where uname = ?";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			//用uname的值，替换SQL语句中的第一个问号占位符
@@ -21,7 +21,7 @@ public class UserDao extends BaseDao
 			if(rs.next())//如果用户输入的uname存在于数据库usertable表中
 			{
 				//将查询到的结果（用户名+密码）封装在User类的对象u中
-				u = new User(uname,rs.getString("password"));
+				u = new User(uname,rs.getString("pwd"));
 			}
 			//调用继承自父类的方法closeConn，完成最后的步骤：“释放连接”
 			closeConn(rs, ps, conn);
@@ -65,7 +65,7 @@ public class UserDao extends BaseDao
 	{
 		boolean mark = false;
 		Connection conn = getConn();
-		String sql = "update usertable set password=? where userName=?";
+		String sql = "update usertable set pwd=? where uname=?";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, u.getPwd());
