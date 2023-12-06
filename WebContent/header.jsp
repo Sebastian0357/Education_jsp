@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,13 @@
                 <p id="goto3">新时代好少年 • 红心向党</p>
             </li>
             <!-- <li><a href="#">客户服务</a></li> -->
-            <li><a href="./login.jsp">登录${user.uname }</a></li>
+            <li><c:if test="${user == null }">
+   					<a href="./login.jsp">登录</a>
+				</c:if>
+				<c:if test="${user != null }">
+   					<a href="./self.jsp">${user.uname }</a>
+				</c:if>
+            </li>
             <p id="time"></p>
         </ul>
     </div>
