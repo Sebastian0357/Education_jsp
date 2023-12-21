@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +12,9 @@
 <jsp:include page="header.jsp"></jsp:include>
     <div id="banner">
         <pre><img src="image/banner.jpg" alt="" id="img1"></pre>
+        
     </div>
-
+		
     <div id="main">
         <div id="main1">
             <div class="title" id="title1">
@@ -31,72 +33,24 @@
                 <h2>全国爱国主义教育示范基地</h2>
             </div>
             <table class="text" id="table1">
-                <tr>
-                    <td class="s1">
-                        <div id="city"><img src="image/北京.jpg" alt="">
-                            <p>北京</p>
+           
+            <c:forEach items="${cList}" var="city" varStatus="cs">
+            	<c:if test="${cs.index % 4 == 0}">
+            		<tr>
+            	</c:if>
+            	<c:if test="${cs.index == 0}">
+            		<td class="s1">
+            	</c:if>
+            	<c:if test="${cs.index != 0}">
+            		<td>
+            	</c:if>
+                        <div id="city"><img src="${city.picture}" alt="">
+                            <p>${city.cityname}</p>
                         </div>
                     </td>
-                    <td>
-                        <div id="city"><img src="image/上海.jpg" alt="">
-                            <p>上海</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/天津.jpg" alt="">
-                            <p>天津</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/重庆.jpg" alt="">
-                            <p>重庆</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="city"><img src="image/河北.jpg" alt="">
-                            <p>河北</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/河南.jpg" alt="">
-                            <p>河南</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/山东.jpg" alt="">
-                            <p>山东</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/山西.jpg" alt="">
-                            <p>山西</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="city"><img src="image/黑龙江.jpg" alt="">
-                            <p>黑龙江</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/吉林.jpg" alt="">
-                            <p>吉林</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/辽宁.jpg" alt="">
-                            <p>辽宁</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="city"><img src="image/安徽.jpg" alt="">
-                            <p>安徽</p>
-                        </div>
-                    </td>
-                </tr>
+                 
+			</c:forEach>
+
             </table>
             <table id="cityText"></table>
         </div>

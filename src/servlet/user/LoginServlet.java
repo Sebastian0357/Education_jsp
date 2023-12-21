@@ -60,7 +60,8 @@ public class LoginServlet extends HttpServlet {
 				//操作1：在session存入对象u，作为合法登录的标记
 				session.setAttribute("user", u);
 				//操作2：重定向跳转至主页面main.jsp
-				response.sendRedirect("index.jsp");
+				RequestDispatcher disp = request.getRequestDispatcher("/cityServlet");
+				disp.forward(request, response);
 				return;
 			}
 //		}
