@@ -34,7 +34,7 @@ public class CityServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("进入cityserv");
+//		System.out.println("进入cityserv");
 		
 		HttpSession session = request.getSession();
 		User u = (User)session.getAttribute("user");

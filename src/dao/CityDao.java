@@ -24,8 +24,8 @@ public class CityDao extends BaseDao
 				if(pic==null || pic.length()==0) c.setPicture("default.jpg");
 				else c.setPicture(rs.getString(2));
 				
-				String s = rs.getString(3);
-				if(s != null) c.setBasearr(s.split(" "));
+				c.setBase(rs.getString(3));
+				
 				cList.add(c);
 			}
 			closeConn(rs, ps, conn);

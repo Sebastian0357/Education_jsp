@@ -128,26 +128,35 @@ body {
 }
 
 #cityText {
+	width:50em;
     font-size: 20px;
-    position: absolute;
-    top: 23em;
+    position:relative;
+    top: -11em;
     left: 22.5em;
 }
 
+
 #cityText td {
+	text-align:center;
     max-width: 17.5em;
     padding: 10px;
 }
-
+#cityText a {
+	color:black;
+}
+#cityText a:hover{
+	color:red;
+}
 
 #main3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 108em;
+    position:absolute;
+    top: 110em;
     width: 120em;
     margin: 0px auto;
+    z-index: -1;
 }
 
 #table2 img {
@@ -170,7 +179,7 @@ body {
     position: absolute;
     top: -3em;
     left: 12em;
-    z-index: 1;
+    
 }
 
 #footer {

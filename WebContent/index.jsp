@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/city.js"></script>
 <title>主页</title>
 </head>
 <body>
@@ -44,6 +46,7 @@
             	<c:if test="${cs.index != 0}">
             		<td>
             	</c:if>
+            			<input type="hidden" value="${city.base}">
                         <div id="city"><img src="${city.picture}" alt="">
                             <p>${city.cityname}</p>
                         </div>
@@ -52,7 +55,9 @@
 			</c:forEach>
 
             </table>
-            <table id="cityText"></table>
+            <table id="cityText">
+            	
+            </table>
         </div>
         <div id="main3">
             <div class="title" id="title3">

@@ -1,71 +1,50 @@
 package bean;
 
-import java.util.Arrays;
 
 public class City
 {
 	private String cityname;
-	private String[] basearr;
+	private String base;
 	private String picture;
-	
-	
 	public City()
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-	public City(String cityname, String[] basearr, String picture)
+	public City(String cityname, String base, String picture)
 	{
 		super();
 		this.cityname = cityname;
-		this.basearr = basearr;
+		this.base = base;
 		this.picture = picture;
 	}
-
-
 	public String getCityname()
 	{
 		return cityname;
 	}
-
-
 	public void setCityname(String cityname)
 	{
 		this.cityname = cityname;
 	}
-
-
-	public String[] getBasearr()
+	public String getBase()
 	{
-		return basearr;
+		return base;
 	}
-
-
-	public void setBasearr(String[] basearr)
+	public void setBase(String base)
 	{
-		this.basearr = basearr;
+		this.base = base;
 	}
-
-
 	public String getPicture()
 	{
 		return picture;
 	}
-
-
 	public void setPicture(String picture)
 	{
 		this.picture = picture;
 	}
-
-
-	@Override
-	public String toString()
-	{
-		return "City [cityname=" + cityname + ", basearr=" + Arrays.toString(basearr) + ", picture=" + picture + "]";
-	}
+	
+	
+	
 	
 	
 }
