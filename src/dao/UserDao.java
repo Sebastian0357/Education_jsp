@@ -14,7 +14,7 @@ public class UserDao extends BaseDao
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, uname);
 			ResultSet rs = ps.executeQuery();
-			while(rs.next())
+			if(rs.next())
 			{
 				u = new User();
 				u.setUname(uname);
@@ -22,7 +22,7 @@ public class UserDao extends BaseDao
 				u.setGender(rs.getString(3));
 				u.setEmail(rs.getString(4));
 				u.setIntroduce(rs.getString(5));
-				u.setBirthday(rs.getString(6).substring(0, 10));
+				u.setBirthday(rs.getString(6));
 				u.setOrganization(rs.getString(7));
 				u.setPhone(rs.getString(8));
 				u.setPicture(rs.getString(9));

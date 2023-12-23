@@ -89,3 +89,35 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.fileinput input {
+	position: absolute;
+	top: 40%;
+	left:15%;
+	
+	padding: 0.5em;
+    border: none;
+    background-color: rgb(205, 205, 205);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width:14.5em;
+}
+
+.quit {
+	padding: 0.5em;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width:4.1em;
+}
+.quit a{
+	color:white;
+	text-decoration: none;
+}

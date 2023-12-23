@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="util.MyUtil" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,12 @@
 	<jsp:include page="header.jsp"></jsp:include>
     <div id="big">
         <div id="tou">
-            <img alt="" src="../image/${user.picture }" id="touxiang">
-
+            <img alt="" src="uploadPic/${user.picture }" id="touxiang"><br>
         </div>
-
+		
         <div id="main">
             <h1 id="hh1">个人信息</h1>
-            <form action="updateInfoServlet" method="post">
+            <form action="updateInfoServlet" method="post" enctype="multipart/form-data">
                 <div>
                     <label>用户名:${user.uname }</label>
                 </div>
@@ -42,9 +42,13 @@
                 <div>
                     <button type="submit">更新信息</button>
                 </div>
-                <div>
-                    <a href="exitUserServlet">退出系统</a>
+                <div class="quit">
+                    <a href="exitUserServlet">退出登录</a>
                 </div>
+                <div class="fileinput">
+                	<input type="file" name="picture">
+                </div>
+                
             </form>
 
         </div>
