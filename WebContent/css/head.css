@@ -32,11 +32,10 @@
 #nav li a {
     color: black;
     text-decoration: none;
-    /* 鍘讳笅鍒掔嚎 */
+    /* 閸樿绗呴崚鎺斿殠 */
     font-size: 18px;
     display: block; 
     text-align: center;
-    /* 鍙宠竟妗� */
 }
 
 #nav li p {
@@ -46,12 +45,8 @@
     padding: 0px 30px;
 }
 
-#nav li:nth-last-child(2) a {
-    /* 鍘绘帀鏈�鍚庝竴涓彸杈规 */
-    border-right: none;
-}
 
-/* 闄や簡绗竴涓� 鍏朵粬鎽镐笂鍘婚兘鍙樿壊 */
+/* 闂勩倓绨＄粭顑跨娑擄拷 閸忔湹绮幗闀愮瑐閸樺鍏橀崣妯垮 */
 #nav li a:hover {
     color: red;
 }
@@ -59,3 +54,10 @@
 #nav li p:hover {
     color: red;
 }
+/*
+#nav li:last-child a{
+    background-color: green;
+    margin:0 50px 0 100px;
+    padding-right: 200px;
+}
+*/

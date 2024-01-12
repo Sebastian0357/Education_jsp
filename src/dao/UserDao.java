@@ -1,6 +1,7 @@
 package dao;
 import java.sql.*;
 
+import bean.Admin;
 import bean.User;
 
 public class UserDao extends BaseDao
@@ -33,7 +34,28 @@ public class UserDao extends BaseDao
 		}
 		return u;
 	}
-	
+	public Admin findByAdminName(String uname)
+	{
+		Admin u = null;
+		Connection conn = getConn();
+		String sql = "select * from admintable where uname = ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, uname);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				u = new Admin();
+				u.setUname(uname);
+				u.setPwd(rs.getString(2));
+				
+			}
+			closeConn(rs, ps, conn);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return u;
+	}
 	public boolean regUser(User u)
 	{
 		boolean mark = false;

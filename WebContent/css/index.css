@@ -130,8 +130,8 @@ body {
 #cityText {
 	width:50em;
     font-size: 20px;
-    position:relative;
-    top: -11em;
+    position:absolute;
+    top: 25em;
     left: 22.5em;
 }
 
@@ -210,4 +210,16 @@ body {
 
 .s1 #city img {
     opacity: 1;
+}
+
+#weather {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position:absolute;
+	width: 200px;
+	height:200px;
+	background-color: rgb(8, 8, 32);
+	top:3.15em;
+	left:75em;
 }

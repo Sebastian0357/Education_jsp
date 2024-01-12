@@ -14,9 +14,9 @@
 <jsp:include page="header.jsp"></jsp:include>
     <div id="banner">
         <pre><img src="image/banner.jpg" alt="" id="img1"></pre>
-        
+        <div id="weather"></div>
     </div>
-		
+	
     <div id="main">
         <div id="main1">
             <div class="title" id="title1">

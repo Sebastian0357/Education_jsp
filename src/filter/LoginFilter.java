@@ -63,6 +63,7 @@ public class LoginFilter implements Filter {
 		//问题：判断session.getAttribute("user")!=null的目的是什么？
 		//问题：session中的user对象如果不为空，那又是在什么时候被存入的？
 		//通过查看session中是否存在user对象，来判定当前用户是否曾经成功登录
+		Object u = session.getAttribute("user");
 		if (null != session.getAttribute("user")) {
 			//如果是合法登录的用户，则直接放行
 			chain.doFilter(request, response);
@@ -81,7 +82,7 @@ public class LoginFilter implements Filter {
 			
 			//通过out输出提示信息			
 			//通过输出javascript脚本，在警告框中显示信息
-			out.print("<script language='javascript'>alert('访问失败！~');</script>");
+			out.print("<script language='javascript'>alert('访问失败！~1');</script>");
 			//通过输出HTML代码，在浏览器中显示信息。
 			out.print("<h1>对不起，您还未登录，无权访问本页面</h1>");
 			out.print("<h1>3秒后将自动跳回登录页面！~</h1>");

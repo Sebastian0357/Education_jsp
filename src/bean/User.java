@@ -1,5 +1,18 @@
 package bean;
 
+/**  
+
+* <p>Title: User.java</p>  
+
+* <p>Description: </p>  
+
+* @author WuTong
+
+* @date 2024年1月10日  
+
+* @version 1.0  
+
+*/  
 public class User 
 {
 	private String uname;

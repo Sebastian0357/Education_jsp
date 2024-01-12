@@ -31,10 +31,10 @@
    					<a href="./login.jsp">登录</a>
 				</c:if>
 				<c:if test="${user != null }">
-   					<a href="./self.jsp">${user.uname }</a>
+   					<a id="user" href="./self.jsp">${user.uname }</a>
 				</c:if>
             </li>
-            <p id="time"></p>
+            <!--<li><p id="time"></p></li>  -->
         </ul>
     </div>
 </body>

@@ -12,20 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import bean.City;
-import bean.User;
 import dao.CityDao;
 
 /**
- * Servlet implementation class CityServlet
+ * Servlet implementation class UpdateIndexInfoServlet
  */
-@WebServlet({"/CityServlet", "/cityServlet"})
-public class CityServlet extends HttpServlet {
+@WebServlet(name = "updateIndexInfoServlet", urlPatterns = { "/updateIndexInfoServlet" })
+public class UpdateIndexInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CityServlet() {
+    public UpdateIndexInfoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,42 +33,37 @@ public class CityServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("进入cityserv");
-		
+//		System.out.println("进入修改界面");
 		HttpSession session = request.getSession();
-//		User u = (User)session.getAttribute("user");
-		
 		CityDao cDao = new CityDao();
 		
-		//将当前用户u的所有朋友信息存入fList列表
 		ArrayList<City> cList = cDao.findCityList();
-		
-		//将包含用户u所有朋友信息的列表fList存入request中
 		session.setAttribute("cList", cList);
 		
-		//url存放未来将要跳转的页面地址
 		String url;
 		
-//		//flag存放着对朋友信息的操作类型：修改？删除？查询？
-//		String flag = request.getParameter("flag");
-//		if("modify".equals(flag))
-//		{
-//			//修改朋友的页面
-//			url = "modifyFriend.jsp";
-//		}
-//		else if("delete".equals(flag))
-//		{
-//			//删除朋友的页面
-//			url = "deleteFriend.jsp";
-//		}
-//		else
-//		{
-//			//查询朋友的页面
-//			url = "queryFriend.jsp";
-//		}
+		//flag存放着对朋友信息的操作类型：修改？删除？查询？
+		String flag = request.getParameter("flag");
+		if("detail".equals(flag))
+		{
+//			City c = 
+			//修改朋友的页面
+			System.out.println("城市信息");
+			url = "cityDetail.jsp";
+		}
+		else if("delete".equals(flag))
+		{
+			//删除朋友的页面
+			url = "deleteFriend.jsp";
+		}
+		else
+		{
+			//查询朋友的页面
+			url = "queryCity.jsp";
+		}
 		
 		//请求转发方式跳转至URL对应的JSP页面上
-		RequestDispatcher disp = request.getRequestDispatcher("index.jsp");
+		RequestDispatcher disp = request.getRequestDispatcher(url);
 		disp.forward(request, response);
 	}
 
