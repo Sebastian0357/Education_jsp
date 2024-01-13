@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-
 }
 
 #nav {
@@ -13,12 +12,10 @@
     list-style: none;
     height: 50px;
     line-height: 50px;
-    /* background-color: yellow; */
     background-color: rgb(247, 247, 247);
 }
 
 #nav li {
-    /* display: flex; */
     float: left;
 }
 
@@ -32,10 +29,10 @@
 #nav li a {
     color: black;
     text-decoration: none;
-    /* 閸樿绗呴崚鎺斿殠 */
     font-size: 18px;
     display: block; 
     text-align: center;
+    padding: 0px 30px;
 }
 
 #nav li p {
@@ -45,8 +42,6 @@
     padding: 0px 30px;
 }
 
-
-/* 闂勩倓绨＄粭顑跨娑擄拷 閸忔湹绮幗闀愮瑐閸樺鍏橀崣妯垮 */
 #nav li a:hover {
     color: red;
 }
@@ -54,10 +49,3 @@
 #nav li p:hover {
     color: red;
 }
-/*
-#nav li:last-child a{
-    background-color: green;
-    margin:0 50px 0 100px;
-    padding-right: 200px;
-}
-*/

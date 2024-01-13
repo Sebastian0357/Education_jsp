@@ -41,23 +41,10 @@
 		</dl>
 		<dl>
 			<dt onClick='showHide("items1_2")'>
-				<b>用户信息管理</b>
+				<b><a href="exitUserServlet" 
+							style="text-decoration: none">安全退出</a></b>
 			</dt>
-			<dd style='display: block' id='items1_2'>
-				<table>
-					<tr>
-						<td><a href="updatePwd.jsp" 
-							style="text-decoration: none" target="rightContent">修改用户信息</a>
-						</td>
-					</tr>
-										
-					<tr>
-						<td><a href="exitUserServlet" 
-							style="text-decoration: none">安全退出</a>
-						</td>
-					</tr>
-				</table>
-			</dd>
+			
 		</dl>
 		
 	</div>

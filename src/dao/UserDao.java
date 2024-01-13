@@ -4,6 +4,19 @@ import java.sql.*;
 import bean.Admin;
 import bean.User;
 
+/**  
+
+* <p>Title: UserDao.java</p>  
+
+* <p>Description: </p>  
+
+* @author WuTong
+
+* @date 2024年1月14日  
+
+* @version 1.0  
+
+*/  
 public class UserDao extends BaseDao
 {
 	public User findByName(String uname)

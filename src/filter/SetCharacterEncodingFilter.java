@@ -34,7 +34,6 @@ public class SetCharacterEncodingFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 	
-	//问题：init方法和doFilter方法的执行顺序是什么？分别在什么时间被调用？
 	public void init(FilterConfig fConfig) throws ServletException {		
 		//通过fConfig参数的getInitParameter方法获取注解中（@WebInitParam(name = "encoding", value = "utf-8")）encoding参数的值utf-8
 		System.out.println("初始化过滤器SetCharacterEncodingFilter的对象，本方法仅执行一次");

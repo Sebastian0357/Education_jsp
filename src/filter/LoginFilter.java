@@ -26,18 +26,15 @@ public class LoginFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
-		//问题：ServletRequest和HttpServletRequest之间的关系是什么？下面代码为何要执行强制类型转化的操作？
 		//将ServletRequest类型的request，转成子类HttpServletRequest类型，进而能够调用更多方法（比如getRequestURI）
-		HttpServletRequest req = (HttpServletRequest) request;		
+		HttpServletRequest req = (HttpServletRequest) request;	
 		
 		//获取用户请求的完整uri（项目名+资源名，例如：/2023JSP/main.jsp）
-		//问题：getRequestURI方法和getContextPath方法的返回值分别是什么？两者有何关系？
 		String request_uri = req.getRequestURI();
 
 		//获取web应用程序的上下文路径（项目名，例如：/2023JSP）
 		String ctxPath = req.getContextPath();
 		
-		//问题：函数substring的作用是什么？其形式参数是什么类型的，作用又是什么？
 		//基于项目名的长度ctxPath.length()，通过计算子串的方式，获取请求的资源名称（例如：/main.jsp）	
 		String uri = request_uri.substring(ctxPath.length());
 		
@@ -60,15 +57,13 @@ public class LoginFilter implements Filter {
 		//通过req的getSession方法，获得session对象
 		HttpSession session = req.getSession();
 		
-		//问题：判断session.getAttribute("user")!=null的目的是什么？
-		//问题：session中的user对象如果不为空，那又是在什么时候被存入的？
 		//通过查看session中是否存在user对象，来判定当前用户是否曾经成功登录
 		Object u = session.getAttribute("user");
 		if (null != session.getAttribute("user")) {
 			//如果是合法登录的用户，则直接放行
 			chain.doFilter(request, response);
-		} else {//不是合法登陆的用户
-			//问题：方法out.print和System.out.print有何区别？为便于用户（非开发者）查看结果，应在Web程序中使用哪一个？
+		} else {
+			//不是合法登陆的用户
 			
 			//将response从ServletResponse强制转化为子类HttpServletResponse类型，进而能调用更多的方法（比如：setContentType）
 			HttpServletResponse resp = (HttpServletResponse)response;			

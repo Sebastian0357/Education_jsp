@@ -1,6 +1,19 @@
 package bean;
 
 
+/**  
+
+* <p>Title: City.java</p>  
+
+* <p>Description: </p>  
+
+* @author WuTong
+
+* @date 2024Äê1ÔÂ14ÈÕ  
+
+* @version 1.0  
+
+*/  
 public class City
 {
 	private String cityname;

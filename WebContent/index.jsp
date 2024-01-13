@@ -13,7 +13,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
     <div id="banner">
-        <pre><img src="image/banner.jpg" alt="" id="img1"></pre>
+        <pre><img src="uploadPic/image/banner.jpg" alt="" id="img1"></pre>
         <div id="weather"></div>
     </div>
 	
@@ -47,7 +47,7 @@
             		<td>
             	</c:if>
             			<input type="hidden" value="${city.base}">
-                        <div id="city"><img src="${city.picture}" alt="">
+                        <div id="city"><img src="uploadPic/${city.picture}" alt="">
                             <p>${city.cityname}</p>
                         </div>
                     </td>
@@ -65,55 +65,55 @@
             </div>
             <table class="text" id="table2">
                 <tr>
-                    <td><img src="image/hxxd.png" alt="">
+                    <td><img src="uploadPic/image/hxxd.png" alt="">
                         <P class="p1">红心向党</P>
                         <P class="p2">贵州 贞丰县民族中学</P>
                     </td>
-                    <td><img src="image/zgmwdm.png" alt="">
+                    <td><img src="uploadPic/image/zgmwdm.png" alt="">
                         <P class="p1">中国梦我的梦</P>
                         <P class="p2">上海 洛川学校</P>
                     </td>
-                    <td><img src="image/xsdhsn.png" alt="">
+                    <td><img src="uploadPic/image/xsdhsn.png" alt="">
                         <P class="p1">红心向党做新时代好少年</P>
                         <P class="p2">辽宁 朝阳市光明小学</P>
                     </td>
-                    <td><img src="image/lbt.png" alt="">
+                    <td><img src="uploadPic/image/lbt.png" alt="">
                         <P class="p1">小萝卜头</P>
                         <P class="p2">甘肃 庆阳市东方红小学</P>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="image/wdhsxl.png" alt="">
+                    <td><img src="uploadPic/image/wdhsxl.png" alt="">
                         <P class="p1">我的红色心路</P>
                         <P class="p2">湖南 长沙市天心区幼幼小学</P>
                     </td>
-                    <td><img src="image/txxd.png" alt="">
+                    <td><img src="uploadPic/image/txxd.png" alt="">
                         <P class="p1">童心向党 梦想飞扬</P>
                         <P class="p2">河北 四公中心小学</P>
                     </td>
-                    <td><img src="image/tmskzw.png" alt="">
+                    <td><img src="uploadPic/image/tmskzw.png" alt="">
                         <P class="p1">他们是刻在我生命力的红色</P>
                         <P class="p2">贵州 贞丰县民族中学</P>
                     </td>
-                    <td><img src="image/wdhxczl.png" alt="">
+                    <td><img src="uploadPic/image/wdhxczl.png" alt="">
                         <P class="p1">我的红色成长路</P>
                         <P class="p2">北京 平谷区第三小学</P>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="image/qczx.jpg" alt="">
+                    <td><img src="uploadPic/image/qczx.jpg" alt="">
                         <P class="p1">清澈之心 礼赞百年</P>
                         <P class="p2">河北 南董镇南董小学</P>
                     </td>
-                    <td><img src="image/dzg.jpg" alt="">
+                    <td><img src="uploadPic/image/dzg.jpg" alt="">
                         <P class="p1">读中国</P>
                         <P class="p2">海南 海南师范大学实验小学</P>
                     </td>
-                    <td><img src="image/tfbzg.jpg" alt="">
+                    <td><img src="uploadPic/image/tfbzg.jpg" alt="">
                         <P class="p1">腾飞吧祖国</P>
                         <P class="p2">贵州 民族希望小学</P>
                     </td>
-                    <td><img src="image/zdsyzrsy.jpg" alt="">
+                    <td><img src="uploadPic/image/zdsyzrsy.jpg" alt="">
                         <P class="p1">峥嵘岁月</P>
                         <P class="p2">广州 湖州市实验学校</P>
                     </td>

@@ -6,9 +6,22 @@ import javax.servlet.http.HttpSession;
 
 import bean.City;
 
+/**  
+
+* <p>Title: CityDao.java</p>  
+
+* <p>Description: </p>  
+
+* @author WuTong
+
+* @date 2024年1月14日  
+
+* @version 1.0  
+
+*/  
 public class CityDao extends BaseDao
 {
-	//查找所有城市信息
+	/**查找所有城市信息*/
 	public ArrayList<City> findCityList()
 	{
 		ArrayList<City> cList = new ArrayList<City>();
@@ -24,8 +37,13 @@ public class CityDao extends BaseDao
 				c.setPicture(rs.getString(2));
 				
 				String pic = rs.getString(2);
-				if(pic==null || pic.length()==0) c.setPicture("default.jpg");
-				else c.setPicture(rs.getString(2));
+				if(pic==null || pic.length()==0)
+				{
+					c.setPicture("default.jpg");
+				} else
+				{
+					c.setPicture(rs.getString(2));
+				}
 				
 				c.setBase(rs.getString(3));
 				
@@ -38,7 +56,7 @@ public class CityDao extends BaseDao
 		return cList;
 	}
 
-	//条件查询：基于城市名查找并返回对应的城市基地信息
+	/**条件查询：基于城市名查找并返回对应的城市基地信息*/
 	public City findByName(String cityname)
 	{
 		City c = null;
@@ -51,7 +69,8 @@ public class CityDao extends BaseDao
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, cityname);
 			ResultSet rs = ps.executeQuery();
-			if(rs.next())//基于主键id查询，最多迭代一次
+			//基于主键id查询，最多迭代一次
+			if(rs.next())
 			{
 				//阿拉伯数字1-8，对应数据库friendinfo表中的1-8列属性
 				//建议：如果不写数字，改写属性名，会提高程序的可读性。

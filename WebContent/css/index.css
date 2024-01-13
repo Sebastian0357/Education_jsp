@@ -3,7 +3,6 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, sans-serif;
-	
 }
 
 body {
@@ -16,21 +15,17 @@ body {
     height: 100%;
     box-sizing: border-box;
     background-color: #ffe3bc;
-    
-
 }
 
 #banner {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #img1 {
     width: 120em;
     height: 35em;
-
 }
 
 .title {
@@ -100,7 +95,6 @@ body {
 
 #city {
     position: relative;
-    /*鐩稿甯冨眬*/
 }
 
 #city img {
@@ -121,9 +115,7 @@ body {
     font-size: 40px;
     color: rgb(255, 255, 255);
     position: absolute;
-    /*璁句负缁濆瀹氫綅*/
     z-index: 1;
-    /*缃簬涓婂眰*/
     top: 40px;
     left: 33%;
 }
@@ -211,16 +203,4 @@ body {
 
 .s1 #city img {
     opacity: 1;
-}
-
-#weather {
-	display: flex;
-    justify-content: center;
-    align-items: center;
-	position:absolute;
-	width: 200px;
-	height:200px;
-	background-color: rgb(8, 8, 32);
-	top:3.15em;
-	left:75em;
 }

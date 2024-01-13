@@ -14,7 +14,7 @@
 	<div id="header">
         <ul id="nav">
             <li>
-                <img src="image/logo.png" alt="">
+                <img src="uploadPic/image/logo.png" alt="">
             </li>
             <li><a href="./index.jsp">首页</a></li>
             <li>
@@ -26,7 +26,6 @@
             <li>
                 <p id="goto3">新时代好少年 • 红心向党</p>
             </li>
-            <!-- <li><a href="#">客户服务</a></li> -->
             <li><c:if test="${user == null }">
    					<a href="./login.jsp">登录</a>
 				</c:if>
@@ -34,7 +33,7 @@
    					<a id="user" href="./self.jsp">${user.uname }</a>
 				</c:if>
             </li>
-            <!--<li><p id="time"></p></li>  -->
+            
         </ul>
     </div>
 </body>

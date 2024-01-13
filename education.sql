@@ -10,10 +10,25 @@ Target Server Type    : MYSQL
 Target Server Version : 80013
 File Encoding         : 65001
 
-Date: 2023-12-23 17:28:29
+Date: 2024-01-14 02:44:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for admintable
+-- ----------------------------
+DROP TABLE IF EXISTS `admintable`;
+CREATE TABLE `admintable` (
+  `uname` varchar(255) NOT NULL,
+  `pwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`uname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of admintable
+-- ----------------------------
+INSERT INTO `admintable` VALUES ('wt', '123456');
 
 -- ----------------------------
 -- Table structure for citytable
