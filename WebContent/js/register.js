@@ -1,4 +1,5 @@
 $(function() {
+	pwdfocus()
 	$("#username").blur(checkUsername);
 	$("#password").blur(checkPwd);
 	$("#confirm_password").blur(confirmpassword);
@@ -40,6 +41,11 @@ $(function() {
 			return false
 		}
 		return true
+	}
+	function pwdfocus() {
+		if($("#username").val() != "") {
+			$("#password").focus();
+		}
 	}
 
 })

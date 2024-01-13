@@ -38,7 +38,6 @@ public class UpdateInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		// 获得页面表单中对应朋友的全部信息
 		String gender = request.getParameter("gender");
 		String email = request.getParameter("email");
 		String introduce = request.getParameter("introduce");

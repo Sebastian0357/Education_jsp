@@ -73,11 +73,18 @@ public class UserDao extends BaseDao
 	{
 		boolean mark = false;
 		Connection conn = getConn();
-		String sql = "insert into usertable values(?,?)";
+		String sql = "insert into usertable values(?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, u.getUname());
 			ps.setString(2, u.getPwd());
+			ps.setString(3, null);
+			ps.setString(4, null);
+			ps.setString(5, null);
+			ps.setString(6, null);
+			ps.setString(7, null);
+			ps.setString(8, null);
+			ps.setString(9, "default.jpg");
 			if(ps.executeUpdate()>0)
 			{
 				mark = true;
