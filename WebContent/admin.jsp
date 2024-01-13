@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>管理员页面</title>
 
 <link rel="stylesheet" type="text/css" href="css/admin.css" charset="UTF-8"/>
 

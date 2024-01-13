@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>城市详细信息</title>
 <link rel="stylesheet" type="text/css" href="css/citydetail.css"/>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">

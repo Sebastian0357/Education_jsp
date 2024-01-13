@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/self.css"/>
-<title>Insert title here</title>
+<title>用户个人信息</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>

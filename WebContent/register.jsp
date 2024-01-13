@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/login.css">
 	<script src="js/jquery.min.js"></script>
     <script src="js/register.js"></script>
-<title>Insert title here</title>
+<title>注册</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
