@@ -15,6 +15,11 @@
 </div>
 
 <div id="left">
+<div id="bottom">
+	欢迎
+	<font color="black">${user.uname}</font>
+	登录
+</div>
 		<dl>
 			<dt onClick='showHide("items1_1")'>
 				<b>城市信息管理</b>
@@ -53,7 +58,7 @@
 										
 					<tr>
 						<td><a href="exitUserServlet" 
-							style="text-decoration: none">退出系统</a>
+							style="text-decoration: none">安全退出</a>
 						</td>
 					</tr>
 				</table>
@@ -67,11 +72,7 @@
 	</iframe>
 </div>
 
-<div id="bottom">
-	欢迎
-	<font color="yellow">${user.uname}</font>
-	登录
-</div>
+
 
 </body>
 </html>

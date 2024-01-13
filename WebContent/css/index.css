@@ -94,6 +94,7 @@ body {
 }
 
 #table1 {
+	position: relative;
     padding: 30px 20px 220px 20px;
 }
 
@@ -130,8 +131,8 @@ body {
 #cityText {
 	width:50em;
     font-size: 20px;
-    position:absolute;
-    top: 25em;
+    position: relative;
+    top: -10em;
     left: 22.5em;
 }
 

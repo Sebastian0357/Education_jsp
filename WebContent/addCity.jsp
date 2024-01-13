@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="util.MyUtil" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,30 +9,29 @@
 <link rel="stylesheet" type="text/css" href="css/citydetail.css"/>
 </head>
 <body>
-<form action="updateCityInfoServlet" method="post" 
+<form action="addCityInfoServlet" method="post" 
       name="updateFriendForm" enctype="multipart/form-data">
 	<table class="detail">
 		<tr>
 			<td class="td_left">城市</td>
 			<td class="td_right">
-				<input type="text" name="name" value="${city.cityname}" 
-						class="txtStyle">
+				<input type="text" name="name" class="txtStyle">
 			</td>		
 		</tr>
 		<tr>
 			<td class="td_left">图片</td>
-			<td class="img"><img src="${city.picture}" alt="无法加载图片"></td>		
-		</tr>
-		<tr>
-			<td class="td_left">修改城市图片</td>
 			<td class="td_right">
+			<div class="fileinput">
+				<%-- 文件上传时，type="file" --%>
+				上传城市图片		
 				<input type="file" name="picture">
+			</div>
 			</td>
 		</tr>
 		<tr>
 			<td class="td_left">示范基地<br>(空格分割)</td>
 			<td class="td_right">
-				<textarea cols="60" rows="5" name="base">${city.base}</textarea>
+				<textarea cols="60" rows="5" name="base"></textarea>
 			</td>		
 		</tr>
 		<tr>
@@ -44,7 +42,6 @@
 			</td>
 		</tr>
 	</table>
-</form>          
-            
+</form>      
 </body>
 </html>

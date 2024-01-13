@@ -25,7 +25,7 @@
             		<td>
             	</c:if>
             			<input type="hidden" value="${city.base}">
-                        <div id="city"><img src="${city.picture}" alt="">
+                        <div id="city"><img src="uploadPic/${city.picture}" alt="">
                             <p id="cname">${city.cityname}</p>
                         </div>
                     </td>

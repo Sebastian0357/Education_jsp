@@ -5,12 +5,31 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
+#left {
+	float: left;
+	position: absolute;
+	top: 1.8em;
+	left: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	width: 13em;
+	height: 24.5em;
+	margin: 0px auto;
+    font-size: 1.15em;
+	background-color: rgb(240, 248, 255, 0.6);
+    border-style: solid;
+    border-width: 6px;
+    border-color: rgb(243, 100, 47);
+    border-radius: 20px;
+    padding: 30px 20px 20px 20px;
+}
+#left a{
+	color:black;
+}
 #right {
 	float: right;
 	position: absolute;
 	top: 2em;
-	left: 20em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	left: 23em;
 	width: 66em;
 	height: 43.5em;
 }
@@ -19,4 +38,11 @@ body {
 	height:100%;
 	border-radius: 20px;
 }
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 

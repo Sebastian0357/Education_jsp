@@ -119,4 +119,31 @@ public class CityDao extends BaseDao
 		}
 		return false;		
 	}
+	
+	public boolean insertCity(City c)
+	{
+		Connection conn = getConn();
+		//在friendinfo表中插入一条记录（包含9条属性）
+		//注：MySQL数据库中的函数str_to_date，可以将数据从字符串转化为日期类型
+		String sql = "insert into citytable values(?,?,?)";
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, c.getCityname());
+			ps.setString(2, c.getPicture());
+			ps.setString(3, c.getBase());
+			
+			//插入成功
+			if(ps.executeUpdate()>0)
+			{
+				return true;
+			}
+			closeConn(null, ps, conn);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//插入失败
+		return false;		
+	}
 }
