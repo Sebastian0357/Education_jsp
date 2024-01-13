@@ -32,11 +32,6 @@
 						</td>
 					</tr>
 					<tr>
-						<td><a href="updateIndexInfoServlet?flag=delete" target="rightContent"
-							style="text-decoration: none">删除城市</a>
-						</td>
-					</tr>
-					<tr>
 						<td><a href="updateIndexInfoServlet" target="rightContent"
 							style="text-decoration: none">查询城市</a>
 						</td>

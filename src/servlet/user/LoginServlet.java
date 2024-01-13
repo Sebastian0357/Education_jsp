@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 			String uname = request.getParameter("username");
 			String pwd = request.getParameter("password");
 			if("1".equals(flag)) {
-				request.setAttribute("title", "管理员登录");
+				session.setAttribute("title", "管理员登录");
 				RequestDispatcher disp = request.getRequestDispatcher("login.jsp");
 				disp.forward(request, response);
 			}

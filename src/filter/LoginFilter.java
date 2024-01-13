@@ -19,7 +19,7 @@ public class LoginFilter implements Filter {
 	//问题：为什么将如下5个uri放入白名单OK_URL中？
 	//白名单uriList，无需登录验证，用户可以直接请求访问的资源uri
 	private static final String [] OK_URL= {"/login.jsp","/register.jsp",
-			"/LoginServlet","/RegServlet","/before_validateCode"};
+			"/LoginServlet","/RegServlet"};
 	public void destroy() {
 		System.out.println("销毁过滤器LoginFilter的对象，本方法仅执行一次");
 	}
