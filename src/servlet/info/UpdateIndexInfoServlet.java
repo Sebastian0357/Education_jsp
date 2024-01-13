@@ -56,7 +56,7 @@ public class UpdateIndexInfoServlet extends HttpServlet {
 		else if("delete".equals(flag))
 		{
 			//删除朋友的页面
-			url = "deleteFriend.jsp";
+			url = "deleteCity.jsp";
 		}
 		else
 		{

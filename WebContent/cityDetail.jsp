@@ -8,6 +8,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/citydetail.css"/>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$("#delete").click(function (){
+		if(confirm('确认删除？')==false) return false;
+	});
+});
+</script>
 </head>
 <body>
 <form action="updateCityInfoServlet" method="post" 
@@ -22,7 +30,7 @@
 		</tr>
 		<tr>
 			<td class="td_left">图片</td>
-			<td class="img"><img src="${city.picture}" alt="无法加载图片"></td>		
+			<td class="img"><img src="uploadPic/${city.picture}" alt="无法加载图片"></td>		
 		</tr>
 		<tr>
 			<td class="td_left">修改城市图片</td>
@@ -39,8 +47,8 @@
 		<tr>
 			<td class="td_left"></td>
 			<td class="td_right">
-				<%-- 调用JS脚本函数updateFriend，检查表单中朋友信息的数据格式 --%>
 				<input type="button" value="提交" onclick="submit()" id=btn_sub>
+				<a href="deleteCityServlet" id="delete"><input type="button" value="删除" id=btn_sub></a>
 			</td>
 		</tr>
 	</table>

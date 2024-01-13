@@ -146,4 +146,29 @@ public class CityDao extends BaseDao
 		//插入失败
 		return false;		
 	}
+	
+	public boolean deleteByCityName(String cityname)
+	{
+		Connection conn = getConn();
+		
+		//SQL删除语句
+		String sql = "delete from citytable where cityname = ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			//循环删除id数组中每一个元素对应的记录
+				ps.setString(1, cityname);
+				
+				if(ps.executeUpdate()>0)
+				{
+					return true;
+				}
+				closeConn(null, ps, conn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+			//删除失败
+			return false;		
+	}
 }
