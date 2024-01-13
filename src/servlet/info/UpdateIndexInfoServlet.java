@@ -44,11 +44,13 @@ public class UpdateIndexInfoServlet extends HttpServlet {
 		
 		//flag存放着对朋友信息的操作类型：修改？删除？查询？
 		String flag = request.getParameter("flag");
+		String cityName = request.getParameter("cityname");
 		if("detail".equals(flag))
 		{
-//			City c = 
+			City c = cDao.findByName(cityName);
+			session.setAttribute("city", c);
 			//修改朋友的页面
-			System.out.println("城市信息");
+//			System.out.println("城市信息");
 			url = "cityDetail.jsp";
 		}
 		else if("delete".equals(flag))
